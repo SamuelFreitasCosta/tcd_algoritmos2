@@ -198,3 +198,57 @@ void Merge(int vet[], int inicio, int meio, int fim)
     }
     
 }
+
+void QuickSort(int vet[], int inicio, int fim)
+{
+    // sleciona o pivo e retorna a função quickc
+    int pivo;
+    if (fim > inicio)
+    {
+        pivo = Particiona(vet, inicio, fim);
+        QuickSort(vet, inicio, pivo -1);
+        QuickSort(vet, pivo+1, fim );        
+    }
+    
+}
+
+int Particiona(int vet[], int inicio, int fim)
+{
+    int esq, dir, pivo, aux;
+    esq = inicio;
+    dir = fim;
+    pivo = vet[inicio];
+    
+    while (esq < dir)
+    {
+        // esq anda para a direita
+        while(esq <= fim && vet[esq] <= pivo)
+        {
+            esq++;
+        }
+
+        // dir retrocede a posicao para esquerda
+        while(dir > inicio && vet[dir] > pivo)
+        {
+            dir--;
+        }
+
+        // troca o elemento da esquerda com o elemento da direita
+        if (esq > dir)
+        {
+            troca(esq, dir);
+        }
+    }
+
+    vet[inicio] = vet[dir];
+    vet[dir] = pivo;
+    return dir;
+}
+
+void troca(int *a, int *b)
+{
+    int aux;
+    aux = *a;
+    *a = *b;
+    *b = aux;
+}

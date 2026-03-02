@@ -7,3 +7,6 @@ void InsertSort (int vet[], int n);
 void SelectionSort(int vet[], int n);
 void MergeSort(int vet[], int inicio, int fim);
 void Merge(int vet[], int inicio, int meio, int fim);
+void QuickSort(int vet[], int inicio, int fim);
+int Particiona(int vet[], int inicio, int fim);
+void troca(int *a, int *b);

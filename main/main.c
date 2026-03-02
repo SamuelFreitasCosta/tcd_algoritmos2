@@ -81,19 +81,20 @@ int main()
 
                         case 2:
                         //BubbleSort(vet, n);
-                        
                         break;
+
                         case 3:
                         //SelectionSort( vet, n);
                         break;
+
                         case 4:
-                        printf("Ok");
                         //MergeSort(vet, inicio,fim);
                         break;
+
                         case 5:
-                        printf("Ok");
-                        //Quick_Sort(); // funcao Quick Sort
+                        //QuickSort(vet,inicio,fim);
                         break;
+                        
                         case 6:
                         printf("Ok");
                         //extra(); // funcao extra a ser escolhida
